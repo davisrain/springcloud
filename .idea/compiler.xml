@@ -17,15 +17,15 @@
         <module name="cloud-consumerconsul-order80" />
         <module name="cloud-provider-payment8002" />
         <module name="cloud-provider-payment8001" />
+        <module name="cloud-provider-hystric-payment8001" />
         <module name="cloud-consumer-feign-hystrix-order80" />
         <module name="zookeeper" />
-        <module name="cloud-gateway-gateway9527" />
-        <module name="cloud-config-client3355" />
+        <module name="cloud-config-server3344" />
         <module name="cloud-providerconsul-payment8006" />
-        <module name="cloud-provider-hystric-payment8001" />
+        <module name="cloud-gateway-gateway9527" />
         <module name="cloud-consumer-hystrix-dashboard9001" />
         <module name="cloud-consumer-feign-order80" />
-        <module name="cloud-config-server3344" />
+        <module name="cloud-config-client3355" />
       </profile>
     </annotationProcessing>
   </component>

@@ -12,6 +12,7 @@ spring:
           search-paths:
             - springcloud-config
           timeout: 60
+          force-pull: true
       #要拉取的分支名
       label:
         main

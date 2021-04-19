@@ -4,7 +4,6 @@ server:
 spring:
   application:
     name: cloud-config-server
-
   cloud:
     config:
       server:
@@ -13,9 +12,18 @@ spring:
           search-paths:
             - springcloud-config
           timeout: 60
+          force-pull: true
       #要拉取的分支名
       label:
         main
+  #rabbitmq相关配置
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+
+
 eureka:
   client:
     register-with-eureka: true
@@ -26,3 +34,9 @@ eureka:
     instance-id: cloud-config-server
     prefer-ip-address: true
 
+#暴露bus刷新配置的端点
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "bus-refresh"
