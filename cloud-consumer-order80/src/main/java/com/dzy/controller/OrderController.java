@@ -37,6 +37,11 @@ public class OrderController {
     @Autowired
     DiscoveryClient discoveryClient;
 
+    @GetMapping("/consumer/payment/zipkin")
+    public String zipkin() {
+       return restTemplate.getForObject(PAYMENT_URL + "/payment/zipkin", String.class);
+    }
+
     @GetMapping("/consumer/payment/create")
     public CommonResult<Integer> createPayment(Payment payment) {
         return restTemplate.postForObject(PAYMENT_URL + "/payment/create", payment, CommonResult.class);

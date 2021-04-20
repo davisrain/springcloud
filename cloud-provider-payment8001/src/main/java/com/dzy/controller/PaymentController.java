@@ -32,6 +32,11 @@ public class PaymentController {
     @Autowired
     DiscoveryClient discoveryClient;
 
+    @GetMapping("/payment/zipkin")
+    public String zipkin() {
+        return "zipkin test";
+    }
+
     @GetMapping("/payment/discover")
     public Object discover() {
         List<String> services = discoveryClient.getServices();
