@@ -1,0 +1,26 @@
+server:
+  port: 3377
+spring:
+  application:
+    name: cloudalibaba-config-service
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+      config:
+        server-addr: localhost:8848
+        file-extension: yml
+        group: DEV_GROUP
+#        group: TEST_GROUP
+        namespace: 31884f06-ea11-42a0-be71-4a34685b0578
+#  nacos config 默认的data id是根据公式：
+#  ${spring.cloud.nacos.config.prefix}-${spring.profiles.active}.${spring.cloud.nacos.config.file-extension}
+#  如果没有spring.profiles.active,则不会拼接，并且没有-；
+#  spring.cloud.nacos.config.prefix的值默认是${spring.application.name}
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+
