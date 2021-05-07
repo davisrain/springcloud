@@ -1,0 +1,19 @@
+server:
+  port: 2001
+spring:
+  application:
+    name: seata-order-service
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+    alibaba:
+      seata:
+        tx-service-group: my_test_tx_group
+
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
