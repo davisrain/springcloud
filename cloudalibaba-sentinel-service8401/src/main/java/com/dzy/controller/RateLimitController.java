@@ -2,6 +2,8 @@ package com.dzy.controller;
 
 import com.alibaba.csp.sentinel.annotation.SentinelResource;
 import com.alibaba.csp.sentinel.slots.block.BlockException;
+import com.alibaba.csp.sentinel.slots.block.Rule;
+import com.alibaba.csp.sentinel.slots.block.flow.FlowRule;
 import com.dzy.handler.CustomBlockHandler;
 import com.dzy.pojo.CommonResult;
 import com.dzy.pojo.Payment;
