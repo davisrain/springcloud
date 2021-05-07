@@ -36,6 +36,9 @@
         <module>cloudalibaba-consumer-order83</module>
         <module>cloudalibaba-config-client3377</module>
         <module>cloudalibaba-sentinel-service8401</module>
+        <module>cloudalibaba-provider-payment9003</module>
+        <module>cloudalibaba-provider-payment9004</module>
+        <module>cloudalibaba-consumer-order84</module>
     </modules>
 
     <properties>
@@ -62,7 +65,7 @@
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-dependencies</artifactId>
-                <version>Hoxton.SR10</version>
+                <version>Hoxton.SR9</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>

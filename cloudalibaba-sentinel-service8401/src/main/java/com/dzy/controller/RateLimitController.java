@@ -2,6 +2,7 @@ package com.dzy.controller;
 
 import com.alibaba.csp.sentinel.annotation.SentinelResource;
 import com.alibaba.csp.sentinel.slots.block.BlockException;
+import com.dzy.handler.CustomBlockHandler;
 import com.dzy.pojo.CommonResult;
 import com.dzy.pojo.Payment;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -24,5 +25,14 @@ public class RateLimitController {
     @SentinelResource(value = "byUrl")
     public CommonResult byUrl(){
         return new CommonResult(200, "按url限流测试ok", new Payment(2020L, "serial002"));
+    }
+
+
+    @GetMapping("/rateLimit/customBlockHandler")
+    @SentinelResource(value = "customBlockHandler",
+            blockHandlerClass = CustomBlockHandler.class,
+            blockHandler = "globalBlockHandler2")
+    public CommonResult customBlockHandler() {
+        return new CommonResult(200, "按客户自定义", new Payment(2020L, "serial003"));
     }
 }
