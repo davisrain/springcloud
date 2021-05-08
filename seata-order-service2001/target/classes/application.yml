@@ -7,9 +7,7 @@ spring:
     nacos:
       discovery:
         server-addr: localhost:8848
-    alibaba:
-      seata:
-        tx-service-group: my_test_tx_group
+
 
 
 management:
@@ -17,3 +15,7 @@ management:
     web:
       exposure:
         include: '*'
+
+seata:
+  tx-service-group: my_test_tx_group
+
