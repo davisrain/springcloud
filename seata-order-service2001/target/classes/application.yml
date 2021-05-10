@@ -18,4 +18,12 @@ management:
 
 seata:
   tx-service-group: my_test_tx_group
+  registry:
+    type: nacos
+    nacos:
+      server-addr: localhost:8848
+  config:
+    type: nacos
+    nacos:
+      server-addr: localhost:8848
 
