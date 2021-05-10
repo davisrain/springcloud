@@ -17,13 +17,14 @@
         <module name="cloud-config-client3366" />
         <module name="cloud-provider-payment8001" />
         <module name="cloud-config-client3355" />
+        <module name="seata-storage-service2002" />
         <module name="cloud-providerconsul-payment8006" />
-        <module name="cloudalibaba-consumer-order83" />
         <module name="cloud-consumer-feign-hystrix-order80" />
         <module name="cloud-stream-rabbitmq-consumer8802" />
         <module name="cloud-provider-hystric-payment8001" />
         <module name="cloud-consumerzk-order80" />
         <module name="cloud-eureka-server7001" />
+        <module name="cloud-consumer-feign-order80" />
         <module name="cloud-gateway-gateway9527" />
         <module name="cloud-provider-payment8002" />
         <module name="seata-order-service2001" />
@@ -31,12 +32,13 @@
         <module name="cloud-eureka-server7002" />
         <module name="cloud-api-commons" />
         <module name="cloudalibaba-consumer-order84" />
-        <module name="cloud-consumer-feign-order80" />
+        <module name="cloudalibaba-consumer-order83" />
         <module name="cloud-consumer-hystrix-dashboard9001" />
         <module name="cloud-consumer-order80" />
         <module name="cloud-config-server3344" />
         <module name="cloudalibaba-sentinel-service8401" />
         <module name="cloud-consumerconsul-order80" />
+        <module name="seata-account-service2003" />
         <module name="cloudalibaba-config-client3377" />
       </profile>
     </annotationProcessing>
