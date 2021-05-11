@@ -5,6 +5,7 @@ import com.dzy.mapper.OrderMapper;
 import com.dzy.service.AccountService;
 import com.dzy.service.OrderService;
 import com.dzy.service.StorageService;
+import io.seata.spring.annotation.GlobalTransactional;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
@@ -22,6 +23,7 @@ public class OrderServiceImpl implements OrderService {
     AccountService accountService;
 
     @Override
+    @GlobalTransactional(name = "create_order", rollbackFor = Exception.class)
     public int create(Order order) {
         log.info("-------------> 创建订单");
         int i = orderMapper.create(order);

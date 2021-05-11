@@ -1,26 +1,28 @@
 server:
-  port: 2001
+  port: 2003
 spring:
   application:
-    name: seata-order-service
+    name: seata-account-service
   cloud:
     nacos:
       discovery:
         server-addr: localhost:8848
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/seata_order
+    url: jdbc:mysql://localhost:3306/seata_account
     username: root
-    password: 123456
-
+    password: 522326
 management:
   endpoints:
     web:
       exposure:
         include: '*'
-
+mybatis:
+  type-aliases-package: com.dzy.domain
+  mapper-locations: classpath:com/dzy/mapper/*.xml
+  configuration:
+    map-underscore-to-camel-case: true
 seata:
-  tx-service-group: my_test_tx_group
   registry:
     type: nacos
     nacos:
@@ -29,10 +31,5 @@ seata:
     type: nacos
     nacos:
       server-addr: localhost:8848
+  tx-service-group: my_test_tx_group
   use-jdk-proxy: true
-
-mybatis:
-  type-aliases-package: com.dzy.domain
-  mapper-locations: classpath:com/dzy/mapper/*.xml
-  configuration:
-    map-underscore-to-camel-case: true
