@@ -7,8 +7,11 @@ spring:
     nacos:
       discovery:
         server-addr: localhost:8848
-
-
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/seata_order
+    username: root
+    password: 123456
 
 management:
   endpoints:
@@ -27,3 +30,8 @@ seata:
     nacos:
       server-addr: localhost:8848
 
+mybatis:
+  type-aliases-package: com.dzy.domain
+  mapper-locations: classpath:com/dzy/mapper
+  configuration:
+    map-underscore-to-camel-case: true

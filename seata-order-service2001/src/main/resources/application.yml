@@ -32,6 +32,6 @@ seata:
 
 mybatis:
   type-aliases-package: com.dzy.domain
-  mapper-locations: classpath:com/dzy/mapper
+  mapper-locations: classpath:com/dzy/mapper/*.xml
   configuration:
     map-underscore-to-camel-case: true
