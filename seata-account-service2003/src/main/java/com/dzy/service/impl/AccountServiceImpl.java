@@ -18,11 +18,11 @@ public class AccountServiceImpl implements AccountService {
 
     @Override
     public int decrease(Long userId, BigDecimal money) {
-        try {
-            TimeUnit.SECONDS.sleep(5);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+//        try {
+//            TimeUnit.SECONDS.sleep(5);
+//        } catch (InterruptedException e) {
+//            e.printStackTrace();
+//        }
         return accountMapper.decrease(userId, money);
     }
 }

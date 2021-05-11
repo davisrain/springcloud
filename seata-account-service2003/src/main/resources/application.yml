@@ -11,7 +11,7 @@ spring:
     driver-class-name: com.mysql.jdbc.Driver
     url: jdbc:mysql://localhost:3306/seata_account
     username: root
-    password: 522326
+    password: 123456
 management:
   endpoints:
     web:
